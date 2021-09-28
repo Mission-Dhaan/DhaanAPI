@@ -1,0 +1,22 @@
+extends layout
+
+block layout-content
+  div.View.WelcomeView
+    h1.Banner Farmers
+    div.Message
+      div.Title
+        table(width='100%', cellspacing='0', cellpadding='10', border='1', bgcolor='#F2F2F2')
+            thead
+                tr
+                th id
+                th Name
+                th email
+                th Active
+            tbody
+            each farmer in data
+                tr
+                    td #{farmer.id}
+                    td #{farmer.name}
+                    td #{farmer.email}
+                    td #{farmer.active}
+    
